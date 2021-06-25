@@ -206,13 +206,15 @@
                 <h1 id="如何架一個自己的網站呢？"><a href="#如何架一個自己的網站呢？" class="headerlink" title="如何架一個自己的網站呢？"></a>如何架一個自己的網站呢？</h1><p>花了不少時間，終於架好了自己的部落格，同時也客製化了一些小設定，像是在頁籤放上一個 icon 小圖等等。</p>
 <p>同時也感謝很多前輩大大的分享，因此我打算也自己整理一篇，除了可以讓自己的學習輸出，更希望可以為也想要自己架設部落格的朋友幫上忙。</p>
 <p>==本篇文將針對 Mac 使用者==</p>
-<h3 id="本文目的是要透過-GitHub-Pages-Hexo-架設個人部落格"><a href="#本文目的是要透過-GitHub-Pages-Hexo-架設個人部落格" class="headerlink" title="本文目的是要透過 GitHub Pages + Hexo 架設個人部落格"></a>本文目的是要透過 GitHub Pages + Hexo 架設個人部落格</h3><h3 id="＊環境要求"><a href="#＊環境要求" class="headerlink" title="＊環境要求"></a>＊環境要求</h3><p>電腦需要先安裝好下列項目：</p>
+<h3 id="本文目的是要透過-GitHub-Pages-Hexo-架設個人部落格"><a href="#本文目的是要透過-GitHub-Pages-Hexo-架設個人部落格" class="headerlink" title="本文目的是要透過 GitHub Pages + Hexo 架設個人部落格"></a>本文目的是要透過 GitHub Pages + Hexo 架設個人部落格</h3><hr>
+<h3 id="＊環境要求"><a href="#＊環境要求" class="headerlink" title="＊環境要求"></a>＊環境要求</h3><p>電腦需要先安裝好下列項目：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a></li>
 <li><a target="_blank" rel="noopener" href="https://nodejs.org/en/">NodeJS</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/">GitHub 帳號</a></li>
 <li><a target="_blank" rel="noopener" href="https://apps.apple.com/tw/app/xcode/id497799835?mt=12">Xcode - Mac 必備</a></li>
 </ul>
+<hr>
 <h3 id="＊新增-GitHub-Repo"><a href="#＊新增-GitHub-Repo" class="headerlink" title="＊新增 GitHub Repo"></a>＊新增 GitHub Repo</h3><p>登入 GitHub 後</p>
 <ol>
 <li><p>新建一個 Repositories<br><img src="/img/newrepo.png"></p>
@@ -224,26 +226,30 @@
 <ol start="3">
 <li>建立以後，點擊綠色框框的 Code，複製一下 HTTPS 的網址，待會用得到<br><img src="/img/clone.png"></li>
 </ol>
+<hr>
 <h3 id="＊安裝-Hexo-相關套件"><a href="#＊安裝-Hexo-相關套件" class="headerlink" title="＊安裝 Hexo 相關套件"></a>＊安裝 Hexo 相關套件</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/docs/#Install-Hexo">Hexo 官網</a></p>
 <ol>
 <li>打開終端機輸入 <code>npm install -g hexo-cli</code></li>
-<li><code>hexo init myblog</code>   初始化 Hexo，並建立一個叫 myblog 的資料夾</li>
-<li><code>cd name</code>   進入剛剛建立的 name 資料夾</li>
+<li><code>hexo init myblog</code>   初始化 Hexo，並建立一個叫 myblog 的資料夾(名字可以自己取喔)</li>
+<li><code>cd myblog</code>   進入剛剛建立的 myblog 資料夾</li>
 <li><code>npm install</code>   安裝 Hexo 套件</li>
-<li><code>npm install hexo-deployer-git --save</code>  git 部署套件</li>
+<li><code>npm install hexo-deployer-git --save</code> 安裝 git 部署套件</li>
 </ol>
-<p>先把待會會用到的都先裝起來，就不用終端機 &amp; Vscode 來回跑</p>
-<p>想要驗證是不是有成功的話，可以啟動伺服器 <code>npx hexo server</code><br>打開瀏覽器，網址輸入 <code>localhost:4000</code> 就可以看到網頁了</p>
+<p>先把待會會用到的都先裝起來，就不用終端機 &amp; Vscode 來回切換 lo</p>
+<p>PS:<br>想要驗證是不是有成功的話，可以啟動伺服器 <code>npx hexo server</code><br>打開瀏覽器，網址輸入 <code>localhost:4000</code> 就可以看到網頁了</p>
+<hr>
 <h3 id="＊部落格相關設定"><a href="#＊部落格相關設定" class="headerlink" title="＊部落格相關設定"></a>＊部落格相關設定</h3><p>我們來看一下 myblog 資料夾（上面第二點建立的）裡面，找到 <code>_config.yml</code> 檔案，用 Vscode 打開來編輯吧！</p>
 <p>打開後，可以修改 6-12 行：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* title:   #部落格標題</span><br><span class="line">* subtitle:   #副標題</span><br><span class="line">* description:  #網站描述 </span><br><span class="line">* keywords:  #網站關鍵字(以逗號隔開)，方便 SEO </span><br><span class="line">* author:   #輸入姓名或暱稱</span><br><span class="line">* language: zh-TW  #輸入使用的語言</span><br><span class="line">* timezone:  #留空以使用系統時間</span><br></pre></td></tr></table></figure>
 
 <p>以及第 16 行，改成填入自己的 GitHub 連結<br>大概就完成了初步設定囉～</p>
 <p><img src="/img/url.png"></p>
+<hr>
 <h3 id="＊主題選擇"><a href="#＊主題選擇" class="headerlink" title="＊主題選擇"></a>＊主題選擇</h3><p>另外 Hexo 官網還提供了百百種的樣式讓我們選擇，<a target="_blank" rel="noopener" href="https://hexo.io/themes/">點這邊</a><br>可以依照個人喜好挑選，點藍色標題進去就會連到創作者的 GitHub，Readme 會有安裝主題的教學</p>
 <p>PS 每個主題安裝步驟都不太一樣，要再研究一下</p>
 <p><img src="/img/themes.png"></p>
 <p>我選的主題 <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean-Blog</a>，沒有把繁體中文優化的很好，我自己還有再調整，也有再客製化成自己喜歡的樣子～<br>可以透過開發者工具找查對應的 HTML/CSS，直接在 Vscode 找出來修改就可以囉！</p>
+<hr>
 <h3 id="＊新增部落格文章"><a href="#＊新增部落格文章" class="headerlink" title="＊新增部落格文章"></a>＊新增部落格文章</h3><ol>
 <li>終端機輸入 <code>npx hexo new &quot;輸入你的文章名稱&quot;</code></li>
 <li>會在 <code>/source/_posts</code> 底下建立你剛剛新建立的文章檔案，會是一個 .md 檔案，支援 markdown 很方便～</li>
@@ -251,6 +257,7 @@
 <p><img src="/img/posts.png"></p>
 <p>上面可以自己再修改文章的標題，也可以再新增 tags（標籤） / categories（分類）</p>
 <p><a target="_blank" rel="noopener" href="https://ed521.github.io/2019/08/hexo-markdown/">markdwon 語法可以參考這邊</a></p>
+<hr>
 <h3 id="＊部署到-GitHub"><a href="#＊部署到-GitHub" class="headerlink" title="＊部署到 GitHub"></a>＊部署到 GitHub</h3><p>我們回到  <code>_config.yml</code>，會在最下面看到 Deployment 部署，貼上剛剛在 GitHub 複製的網址在 repo 欄位</p>
 <p><img src="/img/deploy.png"></p>
 <p>可以留意一下 GitHub 上 repo 的 branch 分支是不是 main<br>（新的預設是 main，如果是 master 再把 branch 改 master 就好了 ）</p>
