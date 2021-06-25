@@ -13,7 +13,7 @@
     
 
     
-        <meta name="description" content="A place to share my life."/>
+        <meta name="description" content="本篇文章接續上一篇，使用 Carrierwave 套件，上傳檔案到 AWS S3"/>
     
 
     <!--Author-->
@@ -23,12 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="我的第一篇部落格文章啦！"/>
+        <meta property="og:title" content="[學習筆記] Carrierwave + AWS S3"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="A place to share my life."/>
+        <meta property="og:description" content="本篇文章接續上一篇，使用 Carrierwave 套件，上傳檔案到 AWS S3"/>
     
 
     <!--Open Graph Site Name-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>我的第一篇部落格文章啦！ - Alex Chuang&#39;s Blog</title>
+    <title>[學習筆記] Carrierwave + AWS S3 - Alex Chuang&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -159,13 +159,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>我的第一篇部落格文章啦！</h1>
+                    <h1>[學習筆記] Carrierwave + AWS S3</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2021-06-25
+                            2021-05-13
                         
                     </span>
                 </div>
@@ -186,12 +186,17 @@
                         
 
 
-<a href="/tags/blog/">#blog</a>
+<a href="/tags/Carrierwave/">#Carrierwave</a>
 
 
                     
                 </div>
                 <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Rails/">Rails</a>
+
                     
                 </div>
             
@@ -201,10 +206,35 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="終於架起來了，我的部落格-🥲"><a href="#終於架起來了，我的部落格-🥲" class="headerlink" title="終於架起來了，我的部落格 🥲"></a>終於架起來了，我的部落格 🥲</h1><h2 id="好像又進步了那麼一咪咪（嗯一咪咪而已）"><a href="#好像又進步了那麼一咪咪（嗯一咪咪而已）" class="headerlink" title="好像又進步了那麼一咪咪（嗯一咪咪而已）"></a>好像又進步了那麼一咪咪（嗯一咪咪而已）</h2><p>好不容易在結業以後，找個空擋把自己的部落格架起來，也把之前打在 Medium 的文章都搬過來，也是花了不少功夫 😓</p>
-<p>經過不斷的測試，大致上是做完了一半吧～ 恭喜老爺 賀喜老爺</p>
-<p>來個跳躍之舞吧！</p>
-<p><img src="/img/dance.gif" alt="dance"></p>
+                <blockquote>
+<p>本篇文章接續上一篇，使用 Carrierwave 套件，上傳檔案到 AWS S3</p>
+</blockquote>
+<p><img src="/img/1__s895EjJrV5Cj0lAlruEx__Q.jpeg"></p>
+<p>🏁 什麼是 <a target="_blank" rel="noopener" href="https://aws.amazon.com/tw/">AWS S3</a>？<br>它是 Amazon 的雲端服務 Amazon Web Services (AWS)；<br>而 S3 代表的是 Simple Storage Service，字面上就是簡單的儲存服務～</p>
+<p>業界也聽到不少人使用 Google 的雲端服務 <a target="_blank" rel="noopener" href="https://cloud.google.com/products/storage/?utm_source=google&utm_medium=cpc&utm_campaign=japac-TW-all-en-dr-bkws-all-pkws-trial-e-dr-1009882&utm_content=text-ad-none-none-DEV_c-CRE_396623962787-ADGP_Hybrid%20%7C%20BKWS%20-%20EXA%20%7C%20Txt%20~%20Storage%20~%20Cloud%20Storage_storage-general%20-%20Products-KWID_43700049567170035-kwd-11642151515&userloc_9040379-network_g&utm_term=KW_google%20cloud%20storage&gclid=CjwKCAjw-e2EBhAhEiwAJI5jg-8HYLFdDElFCfxflwwykTEO4k1G6UENTX262WWaPOrzxGyq8FLuQxoCoREQAvD_BwE&gclsrc=aw.ds">GCP</a> (Google Cloud Platform)<br>這次專案會使用到 AWS S3，因此就不再詳述 GCP 囉。</p>
+<p>除了裝過的 gem carrierwave 以外，要使用這個服務需要再另外加兩個 gem</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem &#x27;fog-aws&#x27;     # 支援上傳檔案到 AWS S3gem &#x27;figaro&#x27;      # 機密資訊傳遞套件，搭配 S3</span><br></pre></td></tr></table></figure>
+
+<p>安裝 gem 大法：<code>**bundle install   **</code>接下來讓我們先來看看 figaro 會做什麼事 👀</p>
+<ol>
+<li>首先在終端機輸入 <code>$ bundle exec figaro install</code><br> 會自動生出一個檔案 <code>application.yml    </code>我們將在裡面輸入 S3 的 aws_access_key_id / aws_secret_access_key<br> 而這個 application.yml 也會被貼心的自動加入 .gitignore 裡面<br> 避免把我們的機密資訊洩漏出去 🔒</li>
+</ol>
+<p><img src="/img/1__QfWT__3S2rrnSpj0OTClPDg.png"></p>
+<p>2. 接下來我們會在單引號裡面輸入從 S3 獲得的專屬<br> aws_access_key_id &amp; aws_secret_access_key，以及在S3 自創的 bucket 名</p>
+<p>aws_access_key_id: ‘S3 的id’<br>aws_secret_access_key: ‘S3 的key’<br>fog_directory: ‘S3 的bucket名稱’</p>
+<p>3. 在<code>config/initializers/</code>路徑下，手動新增 <code>carrierwave.rb</code> 檔案<br>在裡面放入以下的程式碼</p>
+<p><img src="/img/1__EWk6OuS4tF2AdVLjBSueJA.png"></p>
+<p>carrierwave 的 <a target="_blank" rel="noopener" href="https://rubydoc.info/gems/carrierwave/file/README.md">Read.me</a> 提供上方的程式碼給我們，方便複製並修改<br>可以注意到上面有些是 required 必須寫上去，optional 不一定要寫<br>下面是我的版本 👀 （僅供參考）</p>
+<p><img src="/img/1__6bqnJWCGU9ndqeLULzMEiw.png"></p>
+<p>比較不一樣的地方是，我還利用了 figaro 的<code>ENV[]</code>環境變數<br>⚠️ 第六＆七行要依據自己在 AWS S3 選擇的伺服器區域喔 ⚠️<br>我自己選擇的是東北亞 東京，因為我喜歡日本 🇯🇵🗼🗻（誤）</p>
+<p>4. 我們回到 <code>app/uploaders/cover_uploader.rb   </code>來做一個簡單的修改</p>
+<p><img src="/img/1__F9HR7od0KXd6AlOAkCd2Dw.png"></p>
+<p>還記得上篇文章提到 storage :file 跟 storage :fog 的差別嗎？<br>如果要上傳到AWS S3，就要把 file 註解掉，把 fog 亮出來 ✨<br>這邊就完成了，484 很簡單 🥲</p>
+<p>為了做出上傳的功能暈頭了3天＠＠</p>
+<p>最後附上成果照（可能看不太出來😅）</p>
+<p><img src="/img/1__o02J3mvaAYgGrXL7nXYafA.png"></p>
+<p>以上如果敘述不周全的部分還請多包涵 🙇🏻‍♂️<br>想了解更多可以參考下方強大的前輩們部落格文章～</p>
+<p>參考來源 🙏<br>1. <a target="_blank" rel="noopener" href="https://blog.gmifly.tw/2018/06/20/Rails-%E6%8E%9B%E8%BC%89-AWS-S3-%E5%9C%96%E5%BA%8A/">https://blog.gmifly.tw/2018/06/20/Rails-%E6%8E%9B%E8%BC%89-AWS-S3-%E5%9C%96%E5%BA%8A/</a><br>2. <a target="_blank" rel="noopener" href="https://gregning.github.io/ruby-on-rails/2018/01/30/5408775/">https://gregning.github.io/ruby-on-rails/2018/01/30/5408775/</a><br>3. <a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10199103">https://ithelp.ithome.com.tw/articles/10199103</a><br>4. <a target="_blank" rel="noopener" href="https://medium.com/@eggyy1224/%E5%88%A9%E7%94%A8carrierwave%E4%BB%A5%E5%8F%8Aamazon-s3%E8%99%95%E7%90%86rails-%E6%87%89%E7%94%A8%E7%9A%84%E5%9C%96%E7%89%87%E4%B8%8A%E5%82%B3-6ba0027878ad">https://medium.com/@eggyy1224/%E5%88%A9%E7%94%A8carrierwave%E4%BB%A5%E5%8F%8Aamazon-s3%E8%99%95%E7%90%86rails-%E6%87%89%E7%94%A8%E7%9A%84%E5%9C%96%E7%89%87%E4%B8%8A%E5%82%B3-6ba0027878ad</a><br>5. <a target="_blank" rel="noopener" href="https://www.stevenchang.tw/blog/2019/07/16/CarrierWave_and_AWS_S3">https://www.stevenchang.tw/blog/2019/07/16/CarrierWave_and_AWS_S3</a></p>
 
 
                 

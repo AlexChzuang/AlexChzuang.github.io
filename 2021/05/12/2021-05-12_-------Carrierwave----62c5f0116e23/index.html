@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="專案中需要上傳檔案，像是圖片和音訊，因此來好好研究大家都說便利好用的 Carrierwave 套件。"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Alex Chuang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="[學習筆記] Carrierwave 套件"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="專案中需要上傳檔案，像是圖片和音訊，因此來好好研究大家都說便利好用的 Carrierwave 套件。"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Alex Chuang&#39;s Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://alexchzuang.github.ioimg/hello.jpeg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://alexchzuang.github.ioimg/hello.jpeg"/>
+    
+
+    <!-- Title -->
+    
+    <title>[學習筆記] Carrierwave 套件 - Alex Chuang&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">莊先生的部落格</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                所有文章
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                文章分類
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/hello.jpeg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>[學習筆記] Carrierwave 套件</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-05-12
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Carrierwave/">#Carrierwave</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Rails/">Rails</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>專案中需要上傳檔案，像是圖片和音訊，因此來好好研究大家都說便利好用的 Carrierwave 套件。</p>
+<h3 id="以下會談到-Carrierwave-mini-magick"><a href="#以下會談到-Carrierwave-mini-magick" class="headerlink" title="以下會談到 Carrierwave + mini_magick"></a>以下會談到 Carrierwave + mini_magick</h3><ul>
+<li>  carrierwave 提供 Rails 上傳檔案的功能</li>
+<li>  mini_magick 可預設上傳圖片的尺寸</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在 Gemfile 裡面加入gem &#x27;carrierwave&#x27;gem &#x27;mini_magick&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>gem 後面可加上指定版本，可透過此連結查詢：<a target="_blank" rel="noopener" href="https://rubygems.org/">RubyGems 版本查詢</a></p>
+<h4 id="⚠️-安裝-mini-magick-前，須先-Homebrew-安裝-ImageMagick-⚠️"><a href="#⚠️-安裝-mini-magick-前，須先-Homebrew-安裝-ImageMagick-⚠️" class="headerlink" title="⚠️ 安裝 mini_magick 前，須先 Homebrew 安裝 ImageMagick ⚠️"></a>⚠️ 安裝 mini_magick 前，須先 Homebrew 安裝 ImageMagick ⚠️</h4><h4 id="brew-install-imagemagick"><a href="#brew-install-imagemagick" class="headerlink" title="$ brew install imagemagick"></a><code>$ brew install imagemagick</code></h4><h4 id="convert-version-可確認是否安裝成功，成功會出現以下畫面"><a href="#convert-version-可確認是否安裝成功，成功會出現以下畫面" class="headerlink" title="$ convert -version 可確認是否安裝成功，成功會出現以下畫面"></a><code>$ convert -version</code> 可確認是否安裝成功，成功會出現以下畫面</h4><p><img src="/img/0__5cNAFGJ2ehFBek0c.png"></p>
+<h4 id="PS-Mac-安裝-imagemagick-時，可能會出現-error-😱"><a href="#PS-Mac-安裝-imagemagick-時，可能會出現-error-😱" class="headerlink" title="PS: Mac 安裝 imagemagick 時，可能會出現 error 😱"></a>PS: Mac 安裝 imagemagick 時，可能會出現 error 😱</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: python@3.9: the bottle needs the Apple Command Line Tools to be installed. You can install them, if desired, with:xcode-select --install</span><br></pre></td></tr></table></figure>
+
+<p>接下來只要照上面的提示，在終端機輸入 <code>xcode-select --install</code> <br>之後會跳出視窗，透過 Mac 的 Xcode App 下載套件，可能會需要一些時間下載，下載完以後，於終端機再輸入一次<code>brew install imagemagick</code>即可順利安裝成功～</p>
+<p><img src="/img/1__K1Jsx2rXG__KAr7g__GQn__bg.png"></p>
+<h3 id="來善用-Carrierwave-內建的-uploader-功能吧！"><a href="#來善用-Carrierwave-內建的-uploader-功能吧！" class="headerlink" title="來善用 Carrierwave 內建的 uploader 功能吧！"></a>來善用 Carrierwave 內建的 uploader 功能吧！</h3><p><strong>舉例</strong>：要將專輯(album)資料庫建立專輯封面(cover)欄位</p>
+<ul>
+<li>  輸入指令 <code>$ rails g uploader Cover</code></li>
+</ul>
+<p>會自動新增此目錄＆檔案：<code>app/uploaders/cover_uploader.rb</code></p>
+<ul>
+<li>  我們來瞧瞧 <code>cover_uploader.rb</code> 👀</li>
+</ul>
+<p><img src="/img/0__YJlWBdc2EohmWMZd.png"></p>
+<ul>
+<li>  第 4 &amp; 7 行原本預設是被註解的，解開後就可套用 MiniMagick 套件</li>
+</ul>
+<h4 id="storage-file-—-gt-本地端上傳"><a href="#storage-file-—-gt-本地端上傳" class="headerlink" title="storage :file — &gt; 本地端上傳"></a>storage :file — &gt; 本地端上傳</h4><ul>
+<li>  第 12 行：本地上傳的圖片儲存路徑：<code>/public/uploads/album/cover</code></li>
+<li>  上傳成功以後會自己出現</li>
+</ul>
+<h4 id="storage-fog-—-gt-雲端上傳（AWS-S3）"><a href="#storage-fog-—-gt-雲端上傳（AWS-S3）" class="headerlink" title="storage :fog — &gt; 雲端上傳（AWS S3）"></a>storage :fog — &gt; 雲端上傳（AWS S3）</h4><ul>
+<li>  第 16 行手動加上以後，上傳的圖片即會是 500*500 mm 尺寸</li>
+</ul>
+<h3 id="建立資料庫-上傳圖片-所需欄位"><a href="#建立資料庫-上傳圖片-所需欄位" class="headerlink" title="建立資料庫 上傳圖片 所需欄位"></a>建立資料庫 上傳圖片 所需欄位</h3><ul>
+<li>建立 migration，修改資料庫結構<br>  <code>$ rails g migration add_cover_to_albums cover:string</code><br>  <code>$ rails db:migrate</code></li>
+<li>  會在<code>db/migrate</code> 出現 <code>add_cover_to_albums.rb</code> 檔案如下：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class AddCoverToAlbums &lt; ActiveRecord::Migration[6.1]  def change    add_column :albums, :cover, :string  endend</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改-Models"><a href="#修改-Models" class="headerlink" title="修改 Models"></a>修改 Models</h3><p>Models: <code>app/models/album.rb</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Album &lt; ActiveRecord::Base  mount_uploader :cover, CoverUploaderend</span><br></pre></td></tr></table></figure>
+
+<p>讓 Album 綁定(mount) uploader，而且是上傳封面 CoverUploader</p>
+<h3 id="修改-Views"><a href="#修改-Views" class="headerlink" title="修改 Views"></a>修改 Views</h3><ul>
+<li>在 <code>app/views/album/_form.html.erb</code>，建立上傳的欄位<br>  <code>&lt;%= f.input :cover, as: :file, label: &quot;新增封面&quot; %&gt;     </code>( 上面的寫法是因為我是用 simple_form 建立表格 )<br>  ( 如果是 form_for 則是 <code>&lt;%= f.file_field :cover %&gt;</code> )</li>
+<li>  在 <code>app/views/album/show.html.erb</code> 加下方程式碼，顯示出上傳的圖片（ image_tag 是固定用法 ）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;  &lt;strong&gt; Cover: &lt;/strong&gt;  &lt;%= image_tag(@album.cover_url) if @album.cover? %&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>!! 注意（ ）內是底線 url</p>
+<h3 id="修改-Controllers"><a href="#修改-Controllers" class="headerlink" title="修改 Controllers"></a>修改 Controllers</h3><p>最後，在 <code>app/controllers/albums.controller.rb</code><br>加上允許上傳至欄位的參數</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">private  def album_params    params.require(:album).permit(:name, :cover)  end</span><br></pre></td></tr></table></figure>
+
+<p>//  通常會放在 private 裏面</p>
+<p>花了將近三天的時間 debug， 最後總算是大功告成！<br>超感謝網路的大大們還有一起做專案的夥伴＆助教指點迷津 😭</p>
+<p>以上資訊可能會有遺漏＆簡陋，再請多多包涵～<br>下一篇文章會提到上傳到 AWS S3</p>
+<p>參考文章來源：</p>
+<ol>
+<li> <a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10199131">https://ithelp.ithome.com.tw/articles/10199131</a></li>
+<li> <a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10199035">https://ithelp.ithome.com.tw/articles/10199035</a></li>
+<li> <a target="_blank" rel="noopener" href="https://www.stevenchang.tw/blog/2019/07/16/CarrierWave_and_AWS_S3">https://www.stevenchang.tw/blog/2019/07/16/CarrierWave_and_AWS_S3</a></li>
+</ol>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/AlexChzuang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="https://www.linkedin.com/in/yi-chen-chuang-96980493/" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="mailto:ball16357@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2021 Alex Chuang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -13,7 +13,7 @@
     
 
     
-        <meta name="description" content="A place to share my life."/>
+        <meta name="description" content="在正式開始前，我想先來分享一個最近很常聽到的東西，通常很多人會建議面試回答問題時，可以用ＳＴＡＲ的方式來回答，會比較有條理，面試官也會覺得言之有物。"/>
     
 
     <!--Author-->
@@ -23,12 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Alex Chuang&#39;s Blog"/>
+        <meta property="og:title" content="[淺談] 點擊讓 X 軸移動 — JavaScript"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="A place to share my life."/>
+        <meta property="og:description" content="在正式開始前，我想先來分享一個最近很常聽到的東西，通常很多人會建議面試回答問題時，可以用ＳＴＡＲ的方式來回答，會比較有條理，面試官也會覺得言之有物。"/>
     
 
     <!--Open Graph Site Name-->
@@ -36,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>彙整：2021 - Alex Chuang&#39;s Blog</title>
+    <title>[淺談] 點擊讓 X 軸移動 — JavaScript - Alex Chuang&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -151,168 +151,89 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/hello.jpeg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2021</h1>
+                <div class="post-heading">
+                    <h1>[淺談] 點擊讓 X 軸移動 — JavaScript</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-06-12
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/scrollLeft/">#scrollLeft</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/25/My-New-Post/">
-        <h1 class="post-title archive">
-            我的第一篇部落格文章啦！
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-25
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2021/06/13/2021-06-13_-------querySelector---querySelectorAll-f5bb6c3c4492/">
-        <h1 class="post-title archive">
-            [學習筆記] querySelector & querySelectorAll
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-13
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p><img src="/img/1__waO7U4PEiCGffChvBIeK4A.png"></p>
+<p>在正式開始前，我想先來分享一個最近很常聽到的東西，通常很多人會建議面試回答問題時，可以用<strong>ＳＴＡＲ</strong>的方式來回答，會比較有條理，面試官也會覺得言之有物。</p>
+<p>那ＳＴＡＲ分別代表什麼呢？<br><strong>Ｓ－Situation 情境<br>Ｔ－Task 任務<br>Ａ－Action 行動<br>Ｒ－Result 結果</strong></p>
+<p>在舉例自己的過往經歷時，可以帶出該事件的「情境、你被指派的任務、你做了什麼、結果是什麼」，不但有頭有尾，聽者也比較可以去想像。看起來好像很簡單，不過要講得好也是很有學問的！</p>
+<p>那本篇文就會以這個模式來練習看看</p>
+<p>Ｓ－專案需求復刻出 Podcast 平台<br>Ｔ－實作與官網相同的功能－透過點擊左右鍵，讓指定區域 X 軸左右移動<br>Ａ－上網搜尋 MDN、StackOverflow<br>Ｒ－成功寫出點擊事件可移動的功能，也順勢學到讓移動更滑順的方法</p>
+<p><img src="/img/1__f5wapOZNWhc8r5ltU__5gnw.png"></p>
+<p>那要如何完成這樣的功能呢？<br>１．移動 X 軸－scrollLeft</p>
+<p>我們在按鈕下了點擊的監聽事件之後，就可以這麼寫<br><code>document.getElementById(&#39;container&#39;).scrollLeft += 20</code></p>
+<p>點下去 X 軸就會往右移動 20px；<br>相反的如果要往左移動，改寫成 -=20 就可以了</p>
+<p>２．捲軸移動更流暢－則是透過 CSS 加上 scroll-behavior: smooth<br>捲動時就會比較順囉！</p>
+<p>MDN 真的是寫程式的好朋友，參考資料如下：<a target="_blank" rel="noopener" href="https://www.moneysmart.tw/articles/%E6%96%B0%E9%AE%AE%E4%BA%BA-%E9%9D%A2%E8%A9%A6-star%E5%8E%9F%E5%89%87/">https://www.moneysmart.tw/articles/%E6%96%B0%E9%AE%AE%E4%BA%BA-%E9%9D%A2%E8%A9%A6-star%E5%8E%9F%E5%89%87/</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollLeft">https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollLeft</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior">https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior</a></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2021/06/12/2021-06-12_-------slice----b174e6c31193/">
-        <h1 class="post-title archive">
-            [學習筆記] slice( )
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-12
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/12/2021-06-12_---------X-------JavaScript-20fa3739ad9d/">
-        <h1 class="post-title archive">
-            [淺談] 點擊讓 X 軸移動 — JavaScript
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/27/2021-05-27_GitHub-------7b1e23d09431/">
-        <h1 class="post-title archive">
-            GitHub 的小小客製
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-27
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/17/2021-05-17_-------Carrierwave----MP3-2a65fbf53aed/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave 上傳 MP3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/13/2021-05-13_-------Carrierwave---AWS-S3-8b13e78c0276/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave + AWS S3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-13
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/12/2021-05-12_-------Carrierwave----62c5f0116e23/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave 套件
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/03/30/2021-03-30_-----HTML-CSS-----7662740d8917/">
-        <h1 class="post-title archive">
-            [淺談] HTML/CSS 小技巧
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-03-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/03/30/2021-03-30_-----Rails-e0725a6e9da9/">
-        <h1 class="post-title archive">
-            [淺談] Rails
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-03-30
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/archives/2021/page/2/">下一頁  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />

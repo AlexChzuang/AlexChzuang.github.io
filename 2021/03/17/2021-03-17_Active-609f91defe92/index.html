@@ -13,7 +13,7 @@
     
 
     
-        <meta name="description" content="A place to share my life."/>
+        <meta name="description" content="About to count down, 90 days…"/>
     
 
     <!--Author-->
@@ -23,12 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Alex Chuang&#39;s Blog"/>
+        <meta property="og:title" content="Active"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="A place to share my life."/>
+        <meta property="og:description" content="About to count down, 90 days…"/>
     
 
     <!--Open Graph Site Name-->
@@ -36,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>blog, alex, test - Alex Chuang&#39;s Blog</title>
+    <title>Active - Alex Chuang&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -122,7 +122,7 @@
                     <li>
                         <a href="/archives">
                             
-                                Archives
+                                所有文章
                             
                         </a>
                     </li>
@@ -138,15 +138,7 @@
                     <li>
                         <a href="/categories">
                             
-                                Categories
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a target="_blank" rel="noopener" href="https://github.com/AlexChzuang">
-                            
-                                <i class="fa fa-github fa-stack-2x"></i>
+                                文章分類
                             
                         </a>
                     </li>
@@ -159,49 +151,109 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/hello.jpeg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>#blog, alex, test</h1>
+                <div class="post-heading">
+                    <h1>Active</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-03-17
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/flex/">#flex</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/CSS/">CSS</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/25/My-New-Post/">
-        <h1 class="post-title archive">
-            我的第一篇部落格測試文章啦！
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-25
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>About to count down, 90 days…</p>
+<p>今天是2021/3/17 Wed. Windy.</p>
+<p>本日課程延續昨天的CSS，主要學了flex：子層物件橫移，還有主軸、交叉軸的概念；主軸的方向，就是資料的方向。</p>
+<p><img src="/img/1__BPUN__0R7O5nQAnOctH0OGw.png"></p>
+<p>透過 display: flex，即可將像是item, column等物件，橫向展示；如下方的選取器，以及搭配的屬性。</p>
+<p>display: flex<br>flex-wrap: wrap<br>flex-direction: column / row</p>
+<p>而針對主軸的選取器：justify-content 說明如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">justify-content: 順著主軸的屬性 對齊                space-between   把剩餘空間 自動分配 給子物件之間                                （無兩側，甭算margin）                                                space-around    把剩餘空間 自動分配 給子物件兩邊                                （每一物件兩側都要分配）                                space-evenly    把剩餘空間 等距分配 給子物件                                （但不太會用到）（格線系統）（支援度問題）</span><br></pre></td></tr></table></figure>
+
+<h4 id="課程中，也提到了一個很神奇海螺語法，就是-nth-child-n"><a href="#課程中，也提到了一個很神奇海螺語法，就是-nth-child-n" class="headerlink" title="課程中，也提到了一個很神奇海螺語法，就是 nth-child(n)"></a>課程中，也提到了一個很神奇海螺語法，就是 <strong>nth-child(n)</strong></h4><p>括弧內的「n」是重要的關鍵字元，「n」可以是單數「odd」或是偶數「even」，即可針對選取的項次進行屬性變更的動作。</p>
+<p>最後也整理了一些對於主軸或是交叉軸相關的選取器：</p>
+<p>＊跟主軸有關</p>
+<ul>
+<li>  flex-direction</li>
+<li>  flex-wrap</li>
+<li>  justify-contant</li>
 </ul>
+<p>＊跟交叉軸有關</p>
+<ul>
+<li>  align-items: 控制 flex物件</li>
+<li>  align-content: 控制 交叉軸 彈性列的位置</li>
+</ul>
+<p>在研討這個概念的時候，深深覺得思考邏輯的重要性Ｒ</p>
+<p>詳細筆記請見：<a target="_blank" rel="noopener" href="https://hackmd.io/@alexchuang/H1r25JkE_">https://hackmd.io/@alexchuang/H1r25JkE_</a></p>
+<p>以下分享今天的實作演練：</p>
+<p><img src="/img/1__QUszPDdr1OzVmisGlGS1__Q.png"></p>
+<blockquote>
+<p>只能說，<strong>Practice makes perfect.</strong></p>
+</blockquote>
+<p>希望可以透過更多的練習＆實作，進而熟悉，即便不用開 Go Live快速預覽，也可以清楚整個版面的架構。</p>
+<p>明天沒有安排課程，是整天的自習實作，好好加油吧！</p>
+<p>See u soon.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />

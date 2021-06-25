@@ -13,7 +13,7 @@
     
 
     
-        <meta name="description" content="A place to share my life."/>
+        <meta name="description" content="今天要來聊聊CSS中很重要的概念「定位」，定位又分成了好幾種：1. Static 靜態定位2. Relative 相對定位3. Fixed 固定4. Absolute 絕對定位"/>
     
 
     <!--Author-->
@@ -23,12 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Alex Chuang&#39;s Blog"/>
+        <meta property="og:title" content="[淺談]CSS/定位Position"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="A place to share my life."/>
+        <meta property="og:description" content="今天要來聊聊CSS中很重要的概念「定位」，定位又分成了好幾種：1. Static 靜態定位2. Relative 相對定位3. Fixed 固定4. Absolute 絕對定位"/>
     
 
     <!--Open Graph Site Name-->
@@ -36,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>彙整：2021 - Alex Chuang&#39;s Blog</title>
+    <title>[淺談]CSS/定位Position - Alex Chuang&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -151,168 +151,108 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/hello.jpeg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2021</h1>
+                <div class="post-heading">
+                    <h1>[淺談]CSS/定位Position</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-03-24
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/position/">#position</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/CSS/">CSS</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/25/My-New-Post/">
-        <h1 class="post-title archive">
-            我的第一篇部落格文章啦！
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-25
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2021/06/13/2021-06-13_-------querySelector---querySelectorAll-f5bb6c3c4492/">
-        <h1 class="post-title archive">
-            [學習筆記] querySelector & querySelectorAll
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-13
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>今天要來聊聊CSS中很重要的概念「定位」，定位又分成了好幾種：<br>1. Static 靜態定位<br>2. Relative 相對定位<br>3. Fixed 固定<br>4. Absolute 絕對定位</p>
+<p>其中最重要、也最常遇到的會是後面三個，接下來要做一些簡短的介紹。</p>
+<p>首先是 <strong>「Relative 相對定位」</strong>，比較好理解或稱「偏移顯示」；<br>在CSS中，可以對選取的物件做上下左右偏移的設定，如下：</p>
+<p>position: relative;<br>left: 50px;           ＃從原本的位置 偏離左方50px<br>top: 50px;            ＃從原本的位置 偏離上方50px</p>
+<p><img src="/img/1__Kv0AgmhhOOzZpdNauw2p8A.png"></p>
+<p>如左圖（一），當其它物件沒有特別做定位的設定時，則會蓋住其它物件。</p>
+<p><img src="/img/1__z4ldWoTev__ZL3HtKQC54__w.png"></p>
+<p>而若我們把物件 23和物件 24都設定「relative」 時，則會以「原始碼順序」，較新的會覆蓋住較舊的物件。</p>
+<p><img src="/img/1__hTAnu4T1nptbiE__S8mP7Hg.png"></p>
+<p>如圖（二），可以看到 24把 23蓋住了，因為我們有在物件 24身上加上 position: relative</p>
+<p>如果你就是喜歡23號，不想讓它被蓋住，這個時候可以對物件 23使用「還我漂漂拳」（誤</p>
+<p>z-index: 1</p>
+<p>如此一來，物件 23即會跑到最上面了。</p>
+<p>Note: 每個物件的 z-index 的預設值是０</p>
+<p>接下來，我們來看看「 <strong>fixed」</strong><br>其實就字面上來看就蠻明顯的，就是「固定」啦～</p>
+<p>常常在網站上會有「聊天機器人」、或是「Back to top」等在角落；<br>fixed後的物件，會獨立出一層，在資料當下的位置，依據視窗做定位。</p>
+<p><img src="/img/1__CHrCCjtJa00VAaz2eyWX4w.png"></p>
+<p>.box {<br>position: fixed;<br>right: 0;<br>bottom: 0;<br>}</p>
+<p>我們對box這個區塊下<br>position: fixed<br>距離右側 0px<br>距離底部 0px<br>因此就會固定在視窗的右下角</p>
+<p>最後我們來瞧瞧「<strong>絕對定位 Absolute</strong>」<br>當物件不需要跟其他物件互動、遺世而獨立時可使用；<br>使用時機：人見人愛(?)的蓋板廣告。</p>
+<p>絕對定位，若有ABC三層，我們絕對定位在 C層，C會往上找 →B →A層，直到有做_絕對定位_的那層，不然就會直接黏在當下的第一視窗的位置了。</p>
+<p><img src="/img/1__Jh51vIReQ6ulocr0wFAP5Q.png"></p>
+<p>若父層皆未做定位，我們對box做絕對定位，並距離底部為０</p>
+<p>.a {<br>border:black 1px solid;     padding: 30px;<br>}  </p>
+<p>.b {<br>border: black 1px solid;     padding: 30px;<br>}  </p>
+<p>.box {      </p>
+<p>width: 100px;<br>height: 100px;     background-color: red;     font-size: 50px;     color:white;     position: absolute;     bottom: 0; </p>
+<p>}</p>
+<p>當然定位不僅僅是上述提到的模樣，所以我才說淺見嘛～😅<br>如果路過大大們有幸看到最後，不妨給我一些建議或指教，我虛心受教～</p>
+<p>最後謝謝耐心看到最後，下回待續。</p>
+<p>Noted by Alex Chuang 03/24/2021</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2021/06/12/2021-06-12_-------slice----b174e6c31193/">
-        <h1 class="post-title archive">
-            [學習筆記] slice( )
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-12
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/12/2021-06-12_---------X-------JavaScript-20fa3739ad9d/">
-        <h1 class="post-title archive">
-            [淺談] 點擊讓 X 軸移動 — JavaScript
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/27/2021-05-27_GitHub-------7b1e23d09431/">
-        <h1 class="post-title archive">
-            GitHub 的小小客製
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-27
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/17/2021-05-17_-------Carrierwave----MP3-2a65fbf53aed/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave 上傳 MP3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/13/2021-05-13_-------Carrierwave---AWS-S3-8b13e78c0276/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave + AWS S3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-13
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/12/2021-05-12_-------Carrierwave----62c5f0116e23/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave 套件
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/03/30/2021-03-30_-----HTML-CSS-----7662740d8917/">
-        <h1 class="post-title archive">
-            [淺談] HTML/CSS 小技巧
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-03-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/03/30/2021-03-30_-----Rails-e0725a6e9da9/">
-        <h1 class="post-title archive">
-            [淺談] Rails
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-03-30
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/archives/2021/page/2/">下一頁  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />

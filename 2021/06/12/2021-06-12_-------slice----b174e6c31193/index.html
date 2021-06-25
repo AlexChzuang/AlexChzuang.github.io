@@ -13,7 +13,7 @@
     
 
     
-        <meta name="description" content="A place to share my life."/>
+        <meta name="description" content="最近的專案快到尾聲了，也比較有力氣可以去多做些練習題，網路不少前輩分享很多資源，覺得不會太孤單，希望有朝一日自己也會變成厲害的前輩。"/>
     
 
     <!--Author-->
@@ -23,12 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Alex Chuang&#39;s Blog"/>
+        <meta property="og:title" content="[學習筆記] slice( )"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="A place to share my life."/>
+        <meta property="og:description" content="最近的專案快到尾聲了，也比較有力氣可以去多做些練習題，網路不少前輩分享很多資源，覺得不會太孤單，希望有朝一日自己也會變成厲害的前輩。"/>
     
 
     <!--Open Graph Site Name-->
@@ -36,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>彙整：2021 - Alex Chuang&#39;s Blog</title>
+    <title>[學習筆記] slice( ) - Alex Chuang&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -151,168 +151,98 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/hello.jpeg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2021</h1>
+                <div class="post-heading">
+                    <h1>[學習筆記] slice( )</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-06-12
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/slice/">#slice</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/25/My-New-Post/">
-        <h1 class="post-title archive">
-            我的第一篇部落格文章啦！
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-25
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2021/06/13/2021-06-13_-------querySelector---querySelectorAll-f5bb6c3c4492/">
-        <h1 class="post-title archive">
-            [學習筆記] querySelector & querySelectorAll
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-13
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p><img src="/img/1__nuAzszGXUVdRnFUb__8fPAA.png"></p>
+<p>最近的專案快到尾聲了，也比較有力氣可以去多做些練習題，網路不少前輩分享很多資源，覺得不會太孤單，希望有朝一日自己也會變成厲害的前輩。</p>
+<p>其中我發現了這個 <strong>slice( )</strong> 用法，針對「陣列」跟「字串」又有一滴滴點的不一樣 🤏 因此想要記錄下來。</p>
+<p>首先，先來看看來自 W3Schools 的題目（字串）</p>
+<p><img src="/img/1__ecJIjri16v2s4pz3GV6xJw.png"></p>
+<p>目標是要從字串中取出「bananas」，於是我們使用 slice ( )的方法<br>「b」是字串中第 11 個字母，而「s」是字串中第 17 個字母；</p>
+<p>Answer：<br>var x = txt.slice(10, 17); 就可以取出好吃的香蕉囉 🍌</p>
+<p>字串的規則：<code>slice(beginIndex) ／ slice(beginIndex, endIndex)</code> <br>不會取出 beginIndex，不過 endIndex 則會取出來</p>
+<p>接下來，來看看另外一個範例</p>
+<p>若要從陣列中取出 MacBook 跟 AirPods，則應該要這麼寫 👀</p>
+<p>products.slice(2, 4);  就會把工程師必備的麥書跟耳機拿出來了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slice(start) /  slice(start, end)</span><br></pre></td></tr></table></figure>
+
+<p>陣列規則：會取出 start，不會取出 end</p>
+<p>我們直接讓他們面對面，超級比一比</p>
+<blockquote>
+<p>＊字串：slice( beginIndex, endIndex ) — 不會取出 begin，會取出 end<br>＊陣列：slice( start, end ) —會取出 start，end 不會</p>
+</blockquote>
+<p>一個 slice 就這麼有學問，不要搞混啦～（結果只有我會搞混？）</p>
+<p>如以上分享有誤或需要調整的地方，還請路過大大不吝指教 🙇</p>
+<p>參考資料<br>1. <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">MDN — Array.slice( )</a><br>2. <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice">MDN — String.slice( )</a></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2021/06/12/2021-06-12_-------slice----b174e6c31193/">
-        <h1 class="post-title archive">
-            [學習筆記] slice( )
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-12
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/12/2021-06-12_---------X-------JavaScript-20fa3739ad9d/">
-        <h1 class="post-title archive">
-            [淺談] 點擊讓 X 軸移動 — JavaScript
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/27/2021-05-27_GitHub-------7b1e23d09431/">
-        <h1 class="post-title archive">
-            GitHub 的小小客製
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-27
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/17/2021-05-17_-------Carrierwave----MP3-2a65fbf53aed/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave 上傳 MP3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/13/2021-05-13_-------Carrierwave---AWS-S3-8b13e78c0276/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave + AWS S3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-13
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/12/2021-05-12_-------Carrierwave----62c5f0116e23/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave 套件
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/03/30/2021-03-30_-----HTML-CSS-----7662740d8917/">
-        <h1 class="post-title archive">
-            [淺談] HTML/CSS 小技巧
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-03-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/03/30/2021-03-30_-----Rails-e0725a6e9da9/">
-        <h1 class="post-title archive">
-            [淺談] Rails
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-03-30
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/archives/2021/page/2/">下一頁  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />

@@ -13,7 +13,7 @@
     
 
     
-        <meta name="description" content="A place to share my life."/>
+        <meta name="description" content="Today is 3/19/2021. ☀️"/>
     
 
     <!--Author-->
@@ -23,12 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Alex Chuang&#39;s Blog"/>
+        <meta property="og:title" content="On the Path"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="A place to share my life."/>
+        <meta property="og:description" content="Today is 3/19/2021. ☀️"/>
     
 
     <!--Open Graph Site Name-->
@@ -36,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>彙整：2021 - Alex Chuang&#39;s Blog</title>
+    <title>On the Path - Alex Chuang&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -151,168 +151,113 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/hello.jpeg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2021</h1>
+                <div class="post-heading">
+                    <h1>On the Path</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-03-19
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/變數常數/">#變數常數</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Rails/">Rails</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/25/My-New-Post/">
-        <h1 class="post-title archive">
-            我的第一篇部落格文章啦！
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-25
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2021/06/13/2021-06-13_-------querySelector---querySelectorAll-f5bb6c3c4492/">
-        <h1 class="post-title archive">
-            [學習筆記] querySelector & querySelectorAll
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-13
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Today is 3/19/2021. ☀️</p>
+<p>今天老師幫大家上Ruby的主要觀念，還有常見的型態，希望可以打好基礎，未來真的進專案寫程式的時候，比較會知道在幹嘛，當然先修課程勢必要趕快預習結束，不熟的地方也要多複習，問老師、助教或同學們。</p>
+<p>主題大致都圍繞在「變數＆常數」這兩張貼紙，如果面試官問：</p>
+<blockquote>
+<p>『變數跟常數的差別在哪？』</p>
+</blockquote>
+<p>其實差別只在於<strong>「變數」開頭不用大寫；常數的一個英文字母要大寫</strong>，就這樣。或是說，只要第一個英文字母是大寫，就是「常數」。</p>
+<p>而我們在日常生活中常看到的<strong>等於、等號「＝」</strong>，在Ruby的世界中是代表<strong>「指定/指向」</strong>的意思：</p>
+<p>a = 1    //  代表 a 指向 1<br>             也可以說，等號右邊的運算值，會拿去給左邊</p>
+<blockquote>
+<p>等號的右手邊，是要運算的東西，運算完就會丟回左邊的標籤。</p>
+</blockquote>
+<p>＝＝＝＝＝＝除了一個等號，也會看到兩個或三個等號＝＝＝＝＝＝＝</p>
+<p>一個等號：指定<br>兩個等號：比較<br>三個等號也是比較，不過還有別的意思，但不常用</p>
+<p>在幾乎所有的程式語言中，<strong>常數是不可被修改的，不過有一些例外</strong>：</p>
+<p>如果要指向到別的陣列，不會給你改，但可以只改陣列裡其中的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cx = [1,2,3]Cx = [3,3,3]上面不會成立Cx = [1,2,3]Cx[0] = &quot;a&quot;p CxAns: [&quot;a&quot;,2,3]</span><br></pre></td></tr></table></figure>
+
+<p>大多數工程師會簡化程式碼，如果變數同時出現，可能會簡化它：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = a + 1等同於a += 1  （蠻多工程師這麼寫）</span><br></pre></td></tr></table></figure>
+
+<p>其中｜｜代表 「or 、 或」 的意思；</p>
+<p><strong>如果 ｜｜前面的值是假的，則只會印出後面的值，即使後面是假的</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#a = truth / falsea = a || 1   // orputs aAns: 1</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>Ruby世界中，只有 nil &amp; false 是假的</strong></p>
+</blockquote>
+<p>一般在命名變數的時候，除了要是有意義的以外，通常會使用<strong>蛇式🐍</strong>，像是 snake_in_my_boots 在每個字的中間＋ bottom line下底線</p>
+<p>＊符號 → 前面都會有冒號：</p>
+<p>＊區域變數</p>
+<p>＊方法/函數</p>
+<p>＊return → 交回控制權；預設最後一行帶入return，故常被省略⚠️</p>
+<p>最後的最後，附上今天的筆記，如果真有大大看到還請鞭小力一點🙏 <a target="_blank" rel="noopener" href="https://hackmd.io/@alexchuang/HJzYaKZEu">https://hackmd.io/@alexchuang/HJzYaKZEu</a></p>
+<p>明天是自從上課後的第二個週末假日了，我要善用時間才行⛽️目標是完成HTML的復刻作業，還有上傳一些GitHub，複習Ruby。</p>
+<p>see u</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2021/06/12/2021-06-12_-------slice----b174e6c31193/">
-        <h1 class="post-title archive">
-            [學習筆記] slice( )
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-12
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/12/2021-06-12_---------X-------JavaScript-20fa3739ad9d/">
-        <h1 class="post-title archive">
-            [淺談] 點擊讓 X 軸移動 — JavaScript
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/27/2021-05-27_GitHub-------7b1e23d09431/">
-        <h1 class="post-title archive">
-            GitHub 的小小客製
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-27
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/17/2021-05-17_-------Carrierwave----MP3-2a65fbf53aed/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave 上傳 MP3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/13/2021-05-13_-------Carrierwave---AWS-S3-8b13e78c0276/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave + AWS S3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-13
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/12/2021-05-12_-------Carrierwave----62c5f0116e23/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave 套件
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/03/30/2021-03-30_-----HTML-CSS-----7662740d8917/">
-        <h1 class="post-title archive">
-            [淺談] HTML/CSS 小技巧
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-03-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/03/30/2021-03-30_-----Rails-e0725a6e9da9/">
-        <h1 class="post-title archive">
-            [淺談] Rails
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-03-30
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/archives/2021/page/2/">下一頁  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />

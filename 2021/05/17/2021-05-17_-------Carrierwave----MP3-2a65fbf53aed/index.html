@@ -13,7 +13,7 @@
     
 
     
-        <meta name="description" content="A place to share my life."/>
+        <meta name="description" content="今天是臺灣升第三級警戒後，work from home 的第一天。"/>
     
 
     <!--Author-->
@@ -23,12 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Alex Chuang&#39;s Blog"/>
+        <meta property="og:title" content="[學習筆記] Carrierwave 上傳 MP3"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="A place to share my life."/>
+        <meta property="og:description" content="今天是臺灣升第三級警戒後，work from home 的第一天。"/>
     
 
     <!--Open Graph Site Name-->
@@ -36,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>彙整：2021 - Alex Chuang&#39;s Blog</title>
+    <title>[學習筆記] Carrierwave 上傳 MP3 - Alex Chuang&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -151,168 +151,117 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/hello.jpeg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2021</h1>
+                <div class="post-heading">
+                    <h1>[學習筆記] Carrierwave 上傳 MP3</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-05-17
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Carrierwave/">#Carrierwave</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Rails/">Rails</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/25/My-New-Post/">
-        <h1 class="post-title archive">
-            我的第一篇部落格文章啦！
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-25
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2021/06/13/2021-06-13_-------querySelector---querySelectorAll-f5bb6c3c4492/">
-        <h1 class="post-title archive">
-            [學習筆記] querySelector & querySelectorAll
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-13
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p><img src="/img/1__cV785b3i7m98PvMNYM01gw.png"></p>
+<p>今天是臺灣升第三級警戒後，work from home 的第一天。</p>
+<p>為了可以在專案中實現上傳 mp3 的功能，原本試著研究 ActiveStorage 或 Paperclip ，最後還是選擇了老當益壯的 <strong>Carrierwave</strong> 啦！</p>
+<p>題外話：<a target="_blank" rel="noopener" href="https://edgeguides.rubyonrails.org/active_storage_overview.html"><br>ActiveStorage</a> 是近年出道的套件，因為比較新，所以網路可參考的文章偏少，當然程度好一點的朋友還是可以透過閱讀 README 實作～</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/thoughtbot/paperclip">Paperclip</a> (迴紋針)也可以上傳檔案，不過…官方卻說棄用了？而且建議使用 ActiveStorage 🤭（？？）</p>
+<p>總之，由於大多數的 Carrierwave 相關文章都是介紹圖片上傳的功能，為了要上傳音檔，花了不少時間在調查＆研究 😶‍🌫️<br><strong>特別感謝</strong>以下兩篇參考文章～所以放在最前面 🙇🏻‍♂️</p>
+<blockquote>
+<p>參考文章：<br>1. <a target="_blank" rel="noopener" href="http://johnliutw.logdown.com/posts/3280338">http://johnliutw.logdown.com/posts/3280338</a><br>2. <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/62425443/audio-file-doesnt-play-in-safarimediarecorder-rails-carrierwave-s3">https://stackoverflow.com/questions/62425443/audio-file-doesnt-play-in-safarimediarecorder-rails-carrierwave-s3</a></p>
+</blockquote>
+<p>那我們就去參考他們的文章就好吧🙃（疑？</p>
+<p>我實作這功能時，是接續原本的專案，所以實際敲的指令還有新增的code沒有很多，有興趣的捧油可以參考我 <a target="_blank" rel="noopener" href="https://mrchuang.medium.com/%E6%B7%BA%E8%AB%87-carrierwave-%E5%A5%97%E4%BB%B6-62c5f0116e23">前篇文章</a> 有比較詳細的介紹🙂</p>
+<h3 id="讓我們開始吧！"><a href="#讓我們開始吧！" class="headerlink" title="讓我們開始吧！"></a><strong>讓我們開始吧！</strong></h3><ol>
+<li> 輸入指令，建立一錄音檔的上傳器 <code>$ rails g uploader Recording</code></li>
+</ol>
+<p>2. 系統自動生成檔案：<code>app/uploaders/recording_uploader.rb   </code>在這個檔案裡面，由於我要上傳到 AWS S3<br>所以我只有反註解 <code>storage :fog</code> 而已<br>（也許某天我會寫一篇新增AWS S3的文章，嗯也許）</p>
+<p>3. 建立 migration，讓 album 的資料庫可以增加 recording<br><code>$ rails g migration add_recording_to_album recording:string</code></p>
+<p>4. 修改 Models： <code>app/models/album.rb</code></p>
+<p>class Album &lt; ActiveRecord::Base<br>  mount_uploader :recording, RecordingUploader<br>end</p>
+<p>// 讓 album 掛載(mount) 上傳 recording 的功能</p>
+<p>5. 修改： <code>views/albums/new.html.erb</code></p>
+<p>新增頁面多一行，才會在頁面上看到</p>
+<p><code>&lt;%= f.input :recording, as: :file, label: “新增音檔 MP3” %&gt;</code></p>
+<p><img src="/img/1__9leF5blFLx5JnTMnUI7Sxw.png"></p>
+<p>6. 修改：<code>views/albums/show.html.erb</code></p>
+<audio controls="controls" preload="none" autostart="false">
+
+<source src="<%= @album.recording.url %>" type="audio/mp3"></source>
+
+</audio>
+
+<p><img src="/img/1__TlNMnUXR5__Sf9dvD4xFFgw.png"></p>
+<p>在頁面上就會顯示播放器的工具囉！第一次看到的時候真的蠻感動的🥲</p>
+<p>上述五點都已完成的話，就可以試著 <code>$ rails s</code> 來試試看上傳的功能囉！</p>
+<p><img src="/img/1__vSBWwddXAwOQ5IF__7J1Ifg.png"></p>
+<p>以上就是我的實作心得分享，希望大家都可以實作成功～<br>如果有講錯或遺漏的地方歡迎留言跟我說<br>覺得不錯的話也可以給我一個 👏🏼 鼓勵鼓勵 😊</p>
+<p>最後一起為台灣祈禱吧 🙏 希望兩週後解決疫情第三級警戒</p>
+<blockquote>
+<p><strong><em>台灣加油，同島一命！</em></strong></p>
+</blockquote>
+<p>Thanks for the time &amp; wish you a nice day.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2021/06/12/2021-06-12_-------slice----b174e6c31193/">
-        <h1 class="post-title archive">
-            [學習筆記] slice( )
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-12
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2021/06/12/2021-06-12_---------X-------JavaScript-20fa3739ad9d/">
-        <h1 class="post-title archive">
-            [淺談] 點擊讓 X 軸移動 — JavaScript
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-06-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/27/2021-05-27_GitHub-------7b1e23d09431/">
-        <h1 class="post-title archive">
-            GitHub 的小小客製
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-27
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/17/2021-05-17_-------Carrierwave----MP3-2a65fbf53aed/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave 上傳 MP3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/13/2021-05-13_-------Carrierwave---AWS-S3-8b13e78c0276/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave + AWS S3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-13
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/05/12/2021-05-12_-------Carrierwave----62c5f0116e23/">
-        <h1 class="post-title archive">
-            [學習筆記] Carrierwave 套件
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-05-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/03/30/2021-03-30_-----HTML-CSS-----7662740d8917/">
-        <h1 class="post-title archive">
-            [淺談] HTML/CSS 小技巧
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-03-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2021/03/30/2021-03-30_-----Rails-e0725a6e9da9/">
-        <h1 class="post-title archive">
-            [淺談] Rails
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2021-03-30
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/archives/2021/page/2/">下一頁  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
