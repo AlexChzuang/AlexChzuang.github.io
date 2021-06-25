@@ -66,7 +66,7 @@ hr.small {
   max-width: 100px;
   margin: 15px auto;
   border-width: 4px;
-  border-color: #fff;
+  border-color: #000;
 }
 .fa-stack-1x,
 .fa-stack-2x {
@@ -95,7 +95,7 @@ hr.small {
     border-bottom: 1px solid transparent;
   }
   .navbar-custom .navbar-brand {
-    color: #fff;
+    color: #000;
     padding: 20px;
   }
   .navbar-custom .navbar-brand:hover,
@@ -103,7 +103,7 @@ hr.small {
     color: rgba(255,255,255,0.8);
   }
   .navbar-custom .nav li a {
-    color: #fff;
+    color: #000;
     padding: 20px;
   }
   .navbar-custom .nav li a:hover,
@@ -167,7 +167,7 @@ hr.small {
 .intro-header .post-heading,
 .intro-header .page-heading {
   padding: 100px 0 50px;
-  color: #fff;
+  color: #000;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
