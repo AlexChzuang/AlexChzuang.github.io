@@ -23,7 +23,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="我的第一篇部落格文章啦！"/>
+        <meta property="og:title" content="[學習筆記] fetch API －金曲獎名單"/>
     
 
     <!--Open Graph Description-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>我的第一篇部落格文章啦！ - Alex Chuang&#39;s Blog</title>
+    <title>[學習筆記] fetch API －金曲獎名單 - Alex Chuang&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -161,13 +161,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>我的第一篇部落格文章啦！</h1>
+                    <h1>[學習筆記] fetch API －金曲獎名單</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2021-06-25
+                            2021-07-04
                         
                     </span>
                 </div>
@@ -188,7 +188,7 @@
                         
 
 
-<a href="/tags/blog/">#blog</a>
+<a href="/tags/learning/">#learning</a>
 
 
                     
@@ -197,7 +197,7 @@
                     
                         
 
-<a href="/categories/mur-mur/">mur mur</a>
+<a href="/categories/JavaScript/">JavaScript</a>
 
                     
                 </div>
@@ -208,10 +208,19 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="終於架起來了，我的部落格-🥲"><a href="#終於架起來了，我的部落格-🥲" class="headerlink" title="終於架起來了，我的部落格 🥲"></a>終於架起來了，我的部落格 🥲</h1><h2 id="好像又進步了那麼一咪咪（嗯一咪咪而已）"><a href="#好像又進步了那麼一咪咪（嗯一咪咪而已）" class="headerlink" title="好像又進步了那麼一咪咪（嗯一咪咪而已）"></a>好像又進步了那麼一咪咪（嗯一咪咪而已）</h2><p>好不容易在結業以後，找個空擋把自己的部落格架起來，也把之前打在 Medium 的文章都搬過來，也是花了不少功夫 😓</p>
-<p>經過不斷的測試，大致上是做完了一半吧～ 恭喜老爺 賀喜老爺</p>
-<p>來個跳躍之舞吧！</p>
-<p><img src="/img/dance.gif" alt="dance"></p>
+                <p>JavaScript 博大精深，尤其是串接 API，可說是前端工程師的必備技能，而其中可能會面對到的狀況又很多，像是 CORS 要怎麼解決、東西要怎麼撈出來等等，對新手來說真的是挑戰 😓</p>
+<p>／／ 此練習是透過文化部影視及流行音樂產業局提供的 JSON，使用 fetch 串接 ／／</p>
+<h3 id="完整的-HTML"><a href="#完整的-HTML" class="headerlink" title="完整的 HTML"></a>完整的 HTML</h3><script src="https://gist.github.com/AlexChzuang/11cac2df389cfa036e731db383716fce.js"></script>
+
+<h3 id="完整的-JavaScript"><a href="#完整的-JavaScript" class="headerlink" title="完整的 JavaScript"></a>完整的 JavaScript</h3><script src="https://gist.github.com/AlexChzuang/319fa8bc07a8f8e5a5bb94b80949b7d2.js"></script>
+
+<h3 id="以下會針對-JS-的部分解說"><a href="#以下會針對-JS-的部分解說" class="headerlink" title="以下會針對 JS 的部分解說"></a>以下會針對 JS 的部分解說</h3><h4 id="fetch-的起手式"><a href="#fetch-的起手式" class="headerlink" title="fetch 的起手式"></a>fetch 的起手式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&quot; API網址 &quot;</span>)</span><br><span class="line">  .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 成功抓到的話，會有response</span></span><br><span class="line">    <span class="keyword">const</span> data = response.json(); <span class="comment">// 宣告一個 data 常數，指向 json 化的 response</span></span><br><span class="line">    <span class="keyword">return</span> data;</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="跑-for-迴圈撈資料"><a href="#跑-for-迴圈撈資料" class="headerlink" title="跑 for 迴圈撈資料"></a>跑 for 迴圈撈資料</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; data.length; i++) &#123;</span><br><span class="line">  <span class="keyword">let</span> newRecord = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>); <span class="comment">// 宣告一個變數</span></span><br><span class="line">  newRecord.className = <span class="string">&quot;infoMovie&quot;</span>; <span class="comment">// 幫這個新增的 div 加 class</span></span><br><span class="line">  <span class="built_in">document</span>.querySelector(<span class="string">&quot;.record-list&quot;</span>).appendChild(newRecord);</span><br><span class="line">  <span class="comment">// .record-list 是在 HTML 上的，把 newRecord 加在那邊</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> newRecordInfo = <span class="string">` 宣告一個變數</span></span><br><span class="line"><span class="string">    &lt;a href=&quot;<span class="subst">$&#123;data[i].PageUrl&#125;</span>&quot; target=&quot;_blank&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;h3&gt;<span class="subst">$&#123;data[i].Subject&#125;</span>&lt;/h3&gt;&lt;/a&gt;</span></span><br><span class="line"><span class="string">  `</span>; <span class="comment">// 透過點擊 h3 標題，可以連到該網址查看名單</span></span><br><span class="line">  newRecord.innerHTML = newRecordInfo; <span class="comment">// 剛剛新增的 div 的內容就是這些囉！</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="JSON-格式長這樣"><a href="#JSON-格式長這樣" class="headerlink" title="JSON 格式長這樣"></a>JSON 格式長這樣</h4><p><img src="/img/music_json.png"></p>
+<h4 id="最後成品～-網站連結-click-me"><a href="#最後成品～-網站連結-click-me" class="headerlink" title="最後成品～ [網站連結 click me]"></a>最後成品～ <a target="_blank" rel="noopener" href="https://gmalist.w3spaces.com/">[網站連結 click me]</a></h4><p><img src="/img/gma_api.png"></p>
+<p>PS: 今天才發現原來 W3School 也有平台可以上架網頁讚讚！<br>之前都是用 GitHub Page，不過免費版都會有一些流量／空間限制，要留意一下</p>
 
 
                 
